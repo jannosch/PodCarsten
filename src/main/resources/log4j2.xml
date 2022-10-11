@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout pattern="[%t] - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- level="off": Monitoring ausschalten
+             level="info": Monitoring einschalten -->
+        <Logger name="monitoring" level="off" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="off">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
